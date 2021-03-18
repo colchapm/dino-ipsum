@@ -6,16 +6,20 @@ import Dino from './dino-service.js';
 
 $(document).ready(function() {
   $('#getDinos').click(function() {
-    // let words = $('#wordInput').val();
-    // let paragraphs = $('#paragraphInput').val();
-    let par = parseInt(1);
-    let words = parseInt(1);
+    let words = $('#wordInput').val();
+    let par = $('#paragraphInput').val();
+    
+    let newGame = new Dino(0,0);
 
     let promise = Dino.getDino(par, words);
     promise.then(function(response) {
       console.log("in promise.then");
+      
       const body = JSON.parse(response);
-      $('.output').text(`${body[1][1]}`);
+      newGame.hangWord = `${body[0]}`;
+      const hideHang = newGame.hideWord(newGame.hangWord);
+      //$('.output').append(`${newGame.hangWord}`);
+      $('.output').text(`${hideHang}`);
       $('.showErrors').text("");
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error}`);

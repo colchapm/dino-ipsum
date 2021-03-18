@@ -1,9 +1,12 @@
 export default class Dino {
+constructor(hangWord, hiddenWord) {
+  this.hangWord = hangWord;
+  this.hiddenWord = hiddenWord;
+}
   static getDino(par, words) {
-    console.log("in getDino");
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      const url = `http://dinoipsum.herokuapp.com/api/?format=json&words=2&paragraphs=2`;
+      const url = `http://dinoipsum.herokuapp.com/api/?format=json&words=1&paragraphs=1`;
       request.onload = function() {
         if(this.status === 200) {
           resolve(request.response);
@@ -15,5 +18,17 @@ export default class Dino {
       request.send();
     });
   }
-}
+
+  hideWord(hangWord) {
+    let wordLength = hangWord.length;
+    let hiddenWordArray = [];
+    for (let i=0; i < wordLength; i++) {
+      hiddenWordArray.push(' __ ');
+    }
+    return this.hiddenWord = hiddenWordArray.join("");
+  } 
+
+
+  };
+
 
