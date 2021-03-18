@@ -3,13 +3,13 @@
 
 # Application Name
 
-#### Brief Description of Application
+#### This project is to utilize understanding of calling API's and more practice with modern javascript.
 
-#### By Collin Chapman
+#### By Collin Chapman, Juan Hasbun and Marni Sucher
 
 ## Preview
 
-  * Follow this [path](https://github.com/) to view the project on GitHub Pages
+  * This project does not have a GitHub pages
 
 ## Technologies Used
 
@@ -37,7 +37,7 @@
 
 ## Description
 
-This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.
+This project calls on [dino ipsum](https://dinoipsum.herokuapp.com/#res) API and outputs a random word. We then let the user play a game of hangman with the word.
 
 ## Setup/Installation Requirements
 
@@ -60,8 +60,7 @@ This is a detailed description of your application. Give as much detail as neede
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* Several bugs as this project is not nearly complete. Current bug is we don't have a form set up for the user to guess a word and see if that word is included.
 
 ## License
 
