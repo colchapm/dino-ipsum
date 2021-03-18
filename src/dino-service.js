@@ -29,6 +29,15 @@ constructor(hangWord, hiddenWord) {
   } 
 
 
+  compareWord(userGuess) {
+    for(let i=0; i<this.hiddenWord.length; i++) {
+      if(this.hangWord[i] === userGuess) {
+        this.hiddenWord[i] === this.hangWord[i];
+      };
+    };
+    return this.hiddenWord;
+  }
+
   };
 
 

@@ -20,6 +20,10 @@ $(document).ready(function() {
       const hideHang = newGame.hideWord(newGame.hangWord);
       //$('.output').append(`${newGame.hangWord}`);
       $('.output').text(`${hideHang}`);
+      
+      let userGuess = 'a'
+      newGame.compareWord(userGuess)
+
       $('.showErrors').text("");
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error}`);
